@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card} from 'react-bootstrap';
 import { CardBody } from 'reactstrap';
 import Image from './images/WIN_20230327_18_18_28_Pro.jpg';
+import {Accordion} from 'react-bootstrap';
 
 const List = () => {
     const [name, setName] = useState([]);
@@ -86,24 +87,28 @@ const List = () => {
         {name.map((name, index) => (
 
             <div className='flex flex-row'>
+            <Accordion>
+            <Accordion.Item eventKey="0">
+            <Accordion.Header key={index}> <h5>About {name.name}</h5></Accordion.Header>
+            <Accordion.Body>
             <Card className="bg-dark text-white mt-3">
          
     
-        <Card.Title className='mt-3'>Bio Of a Person</Card.Title>
-        <Card.Body>
-                <ListGroup.Item key={index}>
-                 <h5>Name:</h5>{name.name}<br/>
-
-                 <br/> <h5>DOB:</h5> {name.date}<br/> <br/>
-                 <h5>About:</h5>{name.text}
-                </ListGroup.Item>
-                </Card.Body>
-            
-      
-
-       
-
-</Card>
+         <Card.Title className='mt-3'>Bio Of a Person</Card.Title>
+         <Card.Body>
+                 <ListGroup.Item key={index}>
+                  <h5>Name:</h5>{name.name}<br/>
+ 
+                  <br/> <h5>DOB:</h5> {name.date}<br/> <br/>
+                  <h5>About:</h5>{name.text}
+                 </ListGroup.Item>
+                 </Card.Body>       
+ </Card>
+            </Accordion.Body>
+           
+ </Accordion.Item>
+            </Accordion>
+         
             </div>
            
            
