@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import {Button, Form, ListGroup} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Card} from 'react-bootstrap';
+import { CardBody } from 'reactstrap';
+import Image from './images/WIN_20230327_18_18_28_Pro.jpg';
 
 const List = () => {
     const [name, setName] = useState([]);
@@ -71,22 +74,44 @@ const List = () => {
         </div>
        
       
-
+        
         <div className='mt-3'>
         <Button 
         variant='primary'
         onClick={addNameHandler}
         >Add Name</Button>
+
+       
         <ListGroup className='mt-3'>
         {name.map((name, index) => (
+
+            <div className='flex flex-row'>
+            <Card className="bg-dark text-white mt-3">
+         
+    
+        <Card.Title className='mt-3'>Bio Of a Person</Card.Title>
+        <Card.Body>
                 <ListGroup.Item key={index}>
-                 <h5>Name:</h5>{name.name} <br/>
+                 <h5>Name:</h5>{name.name}<br/>
 
                  <br/> <h5>DOB:</h5> {name.date}<br/> <br/>
                  <h5>About:</h5>{name.text}
                 </ListGroup.Item>
+                </Card.Body>
+            
+      
+
+       
+
+</Card>
+            </div>
+           
+           
+         
+
               ))}
         </ListGroup>
+       
        
         </div>
        
