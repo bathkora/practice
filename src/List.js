@@ -89,17 +89,17 @@ const List = () => {
             <div className='flex flex-row'>
             <Accordion>
             <Accordion.Item eventKey="0">
-            <Accordion.Header key={index}> <h5>About {name.name}</h5></Accordion.Header>
+            <Accordion.Header key={index}> <h5>{name.name}</h5></Accordion.Header>
             <Accordion.Body>
             <Card className="bg-dark text-white mt-3">
          
     
-         <Card.Title className='mt-3'>Bio Of a Person</Card.Title>
+         
          <Card.Body>
                  <ListGroup.Item key={index}>
-                  <h5>Name:</h5>{name.name}<br/>
+                  
  
-                  <br/> <h5>DOB:</h5> {name.date}<br/> <br/>
+                   <h5>DOB:</h5> {name.date}<br/> <br/>
                   <h5>About:</h5>{name.text}
                  </ListGroup.Item>
                  </Card.Body>       
